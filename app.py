@@ -13,7 +13,7 @@ def get_db_connection():
     db_url = os.environ.get("DATABASE_URL")
     if not db_url:
         # Fallback para teste local
-        db_url = "postgresql://postgres:suasenha@localhost:5432/pizzaria_db"
+        db_url = "postgresql://postgres:VXpSeGRxpZZVgLWEuSsxSPLFqvfHMOzU@postgres.railway.internal:5432/railway"
     try:
         return psycopg2.connect(db_url, cursor_factory=RealDictCursor)
     except Exception as e:
